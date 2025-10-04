@@ -7,7 +7,7 @@
   <title>To Do List</title>
 
   <!-- CSS External -->
-  <link rel="stylesheet" href="css\style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -24,12 +24,22 @@
         <form id="task-form">
             <input type="text" id="task-input" placeholder="Tambahkan Tugas" required>
             <input type="date" id="date-input">
-            <button type="submit">+</button>
+            <button type="button" onclick="addTask()">+</button>
         </form>
     </section>
 
+    <!-- Action Button -->
+    <section class="action-buttons">
+        <button type="button" id="clear-tasks-button" onclick="deleteAllTask()">Delete All</button>
+        <button type="button" id="sort-tasks-button" onclick="filterTasks()">Filter</button>
+    </section>
+     
     <!-- List To Do  List -->
-     <section></section>
+     <section>
+        <ul id="task-list">
+            <p id="no-tasks-message">Tidak ada tugas. Tambahkan tugas!</p>
+        </ul>
+     </section>
   </main>
 
   <!-- footer -->
@@ -38,7 +48,7 @@
   </footer>
 
   <!-- JavaScript -->
-   <script src="js\script.js"></script>
+   <script src="js/script.js"></script>
 
 </body>
 </html>
